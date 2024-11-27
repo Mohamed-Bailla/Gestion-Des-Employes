@@ -1,0 +1,127 @@
+CRITICAL - 2024-11-27 01:43:09 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: ".php"
+[Method: GET, Route: /]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('', [], true)
+ 3 APPPATH\Controllers\Home.php(9): view('')
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+ 9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\gestion_employes\\public\\index.php')
+ERROR - 2024-11-27 17:55:22 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'UNSIGNED NOT NULL,
+	`nom` VARCHAR(100) NOT NULL,
+	`prenom` VARCHAR(100) NOT N...' at line 3 in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-173743_CreateUsers.php(51): CodeIgniter\Database\Forge->createTable('employes_info')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:05:48 --> mysqli_sql_exception: Unknown table 'ge.employes' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `emp...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `emp...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `emp...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `emp...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-173743_CreateUsers.php(51): CodeIgniter\Database\Forge->dropTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->down()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:06:06 --> mysqli_sql_exception: Unknown table 'ge.employes' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('DROP TABLE `emp...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('DROP TABLE `emp...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('DROP TABLE `emp...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(663): CodeIgniter\Database\BaseConnection->query('DROP TABLE `emp...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-173743_CreateUsers.php(51): CodeIgniter\Database\Forge->dropTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->down()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(290): CodeIgniter\Database\MigrationRunner->migrate('down', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\MigrateRollback.php(101): CodeIgniter\Database\MigrationRunner->regress(0)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\MigrateRollback->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate:rollbac...', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:15:53 --> mysqli_sql_exception: Duplicate key name 'cin' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-181226_CreateUsers.php(49): CodeIgniter\Database\Forge->createTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:15:58 --> mysqli_sql_exception: Duplicate key name 'cin' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-181226_CreateUsers.php(49): CodeIgniter\Database\Forge->createTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:20:12 --> mysqli_sql_exception: Duplicate key name 'cin' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-181226_CreateUsers.php(49): CodeIgniter\Database\Forge->createTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
+ERROR - 2024-11-27 18:20:54 --> mysqli_sql_exception: Duplicate key name 'cin' in C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php:312
+Stack trace:
+#0 C:\xampp\htdocs\gestion_employes\system\Database\MySQLi\Connection.php(312): mysqli->query('CREATE TABLE `e...', 0)
+#1 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `e...')
+#2 C:\xampp\htdocs\gestion_employes\system\Database\BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `e...')
+#3 C:\xampp\htdocs\gestion_employes\system\Database\Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `e...')
+#4 C:\xampp\htdocs\gestion_employes\app\Database\Migrations\2024-11-27-181226_CreateUsers.php(49): CodeIgniter\Database\Forge->createTable('employes')
+#5 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 C:\xampp\htdocs\gestion_employes\system\Database\MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 C:\xampp\htdocs\gestion_employes\system\Commands\Database\Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 C:\xampp\htdocs\gestion_employes\system\CLI\Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 C:\xampp\htdocs\gestion_employes\system\CLI\Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 C:\xampp\htdocs\gestion_employes\system\Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 C:\xampp\htdocs\gestion_employes\system\Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 C:\xampp\htdocs\gestion_employes\spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
