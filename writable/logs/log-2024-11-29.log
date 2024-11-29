@@ -436,6 +436,7 @@ in APPPATH\Controllers\ResetPasswordController.php on line 90.
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Des-Employes\\public\\index.php')
+<<<<<<< HEAD
 INFO - 2024-11-29 16:12:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 16:13:02 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 16:15:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -449,10 +450,28 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  3 APPPATH\Controllers\AuthController.php(67): view('auth/reset_password', [...])
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetPassword('2cbb7047d7dd125f4fe4a09995244fd3')
  5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+=======
+INFO - 2024-11-29 16:22:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 16:33:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 16:34:22 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 16:35:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 16:38:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 16:38:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2024-11-29 17:02:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 17:15:29 --> ErrorException: preg_match(): Unknown modifier '$'
+[Method: GET, Route: employee_list.php]
+in SYSTEMPATH\Router\Router.php on line 432.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'preg_match(): Unknown modifier \'$\'', 'C:\\wamp64\\www\\Gestion-Des-Employes\\system\\Router\\Router.php', 432)
+ 2 SYSTEMPATH\Router\Router.php(432): preg_match('#^dashboard#$#u', 'employee_list.php', [])
+ 3 SYSTEMPATH\Router\Router.php(210): CodeIgniter\Router\Router->checkRoutes('employee_list.php')
+ 4 SYSTEMPATH\CodeIgniter.php(834): CodeIgniter\Router\Router->handle('employee_list.php')
+ 5 SYSTEMPATH\CodeIgniter.php(457): CodeIgniter\CodeIgniter->tryToRouteIt(Object(CodeIgniter\Router\RouteCollection))
+>>>>>>> 63804bf (Save local changes before pull)
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Des-Employes\\public\\index.php')
 INFO - 2024-11-29 16:19:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 16:19:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -467,10 +486,23 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  3 APPPATH\Controllers\AuthController.php(10): view('ForgotPassword')
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->index()
  5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+=======
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+INFO - 2024-11-29 17:30:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2024-11-29 17:32:23 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "employee.php"
+[Method: GET, Route: employee]
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
+ 1 SYSTEMPATH\View\View.php(222): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('employee.php')
+ 2 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee', [], true)
+ 3 APPPATH\Controllers\EmployeeController.php(14): view('employee', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+>>>>>>> 63804bf (Save local changes before pull)
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Des-Employes\\public\\index.php')
 INFO - 2024-11-29 16:40:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 16:40:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
@@ -483,10 +515,52 @@ in SYSTEMPATH\Exceptions\FrameworkException.php on line 41.
  3 APPPATH\Controllers\AuthController.php(58): view('auth/reset_password', [...])
  4 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\AuthController->resetPassword('7ef0a6c49fa066fb126ad6e61f034255')
  5 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AuthController))
+=======
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:44:28 --> ErrorException: Undefined array key "id"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "id"', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:45:37 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:50:16 --> ParseError: syntax error, unexpected token "<", expecting "function" or "const"
+[Method: GET, Route: employee]
+in APPPATH\Controllers\EmployeeController.php on line 36.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(296): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Controllers\\EmployeeController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(272): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\EmployeeController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\EmployeeController')
+ 4 SYSTEMPATH\CodeIgniter.php(887): class_exists('\\App\\Controllers\\EmployeeController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(496): CodeIgniter\CodeIgniter->startController()
+>>>>>>> 63804bf (Save local changes before pull)
  6 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
  7 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
  8 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
  9 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+<<<<<<< HEAD
 10 SYSTEMPATH\rewrite.php(44): require_once('C:\\xampp\\htdocs\\Gestion-Des-Employes\\public\\index.php')
 CRITICAL - 2024-11-29 16:40:58 --> CodeIgniter\View\Exceptions\ViewException: Invalid file: "auth/reset_password.php"
 [Method: GET, Route: auth/reset-password/7ef0a6c49fa066fb126ad6e61f034255]
@@ -634,3 +708,171 @@ INFO - 2024-11-29 17:28:51 --> Session: Class initialized using 'CodeIgniter\Ses
 INFO - 2024-11-29 17:29:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 17:30:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 INFO - 2024-11-29 17:30:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+=======
+10 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:51:11 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:53:54 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:54:26 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:55:09 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 314.
+ 1 APPPATH\Views\employee_list.php(314): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 314)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:58:55 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 307.
+ 1 APPPATH\Views\employee_list.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 307)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 17:59:00 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 307.
+ 1 APPPATH\Views\employee_list.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 307)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 18:01:31 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 307.
+ 1 APPPATH\Views\employee_list.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 307)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 18:03:11 --> ErrorException: Undefined variable $data
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 307.
+ 1 APPPATH\Views\employee_list.php(307): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $data', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 307)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 18:08:36 --> ErrorException: Undefined array key "department"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 311.
+ 1 APPPATH\Views\employee_list.php(311): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department"', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 311)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(14): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 18:12:57 --> ErrorException: Undefined array key "department_name"
+[Method: GET, Route: employee]
+in APPPATH\Views\employee_list.php on line 311.
+ 1 APPPATH\Views\employee_list.php(311): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "department_name"', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php', 311)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_list.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_list', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(23): view('employee_list', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+CRITICAL - 2024-11-29 18:18:09 --> ErrorException: Undefined variable $employee
+[Method: GET, Route: employee/edit/2]
+in APPPATH\Views\employee_edit.php on line 83.
+ 1 APPPATH\Views\employee_edit.php(83): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $employee', 'C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_edit.php', 83)
+ 2 SYSTEMPATH\View\View.php(234): include('C:\\wamp64\\www\\Gestion-Des-Employes\\app\\Views\\employee_edit.php')
+ 3 SYSTEMPATH\View\View.php(237): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1171): CodeIgniter\View\View->render('employee_edit', [], true)
+ 5 APPPATH\Controllers\EmployeeController.php(45): view('employee_edit', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\EmployeeController->edit('2')
+ 7 SYSTEMPATH\CodeIgniter.php(509): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\EmployeeController))
+ 8 SYSTEMPATH\CodeIgniter.php(355): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(325): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(67): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(56): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+12 SYSTEMPATH\rewrite.php(44): require_once('C:\\wamp64\\www\\Gestion-Des-Employes\\public\\index.php')
+>>>>>>> 63804bf (Save local changes before pull)
