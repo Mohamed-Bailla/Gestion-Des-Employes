@@ -32,7 +32,7 @@ class AuthController extends BaseController
 
         // Send email with the reset link
         $emailService = \Config\Services::email();
-        $emailService->setFrom('zakariaaitballouk2018@gmail.com', 'CodeIgniter Reset');
+        $emailService->setFrom('zakariaaitballouk2018@gmail.com', 'GESTION');
         $emailService->setTo($email);
         $emailService->setSubject('Password Reset Request');
         $emailService->setMessage("Click the link to reset your password: <a href='$resetLink'>$resetLink</a>");

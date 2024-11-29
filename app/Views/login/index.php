@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <title>Login Page</title>
     <style>
         body {
@@ -58,6 +59,27 @@
         .alert {
             font-size: 14px;
         }
+
+        .input-group-text {
+            background: #6c63ff;
+            color: #fff;
+            border: none;
+        }
+
+        .input-group-text i {
+            font-size: 18px;
+        }
+
+        .text-end a {
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        .text-end a i {
+            margin-right: 5px;
+        }
     </style>
 </head>
 <body>
@@ -66,14 +88,20 @@
         <form action="/login/verification" method="post">
             <div class="mb-3">
                 <label for="email" class="form-label">Email Address</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email" >
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-envelope"></i></span>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Enter your email">
+                </div>
             </div>
             <div class="mb-3">
                 <label for="password" class="form-label">Password</label>
-                <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password" >
+                <div class="input-group">
+                    <span class="input-group-text"><i class="fas fa-lock"></i></span>
+                    <input type="password" name="password" class="form-control" id="password" placeholder="Enter your password">
+                </div>
             </div>
             <p class="text-end">
-                <a href="/forgotpassword">Forgot Password?</a>
+                <a href="/forgotpassword"><i class="fas fa-key"></i> Forgot Password?</a>
             </p>
             
             <!-- Flash Messages -->
@@ -85,7 +113,7 @@
             <?php endif; ?>
 
             <div class="d-grid gap-2">
-                <button type="submit" class="btn btn-primary">Login</button>
+                <button type="submit" class="btn btn-primary"><i class="fas fa-sign-in-alt"></i> Login</button>
             </div>
         </form>
     </div>
