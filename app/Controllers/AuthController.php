@@ -6,6 +6,9 @@ use App\Models\UserModel;
 
 class AuthController extends BaseController
 {
+    public function index(){
+        return view("forgot_password");
+    }
     public function processForgotPassword()
     {
         $email = $this->request->getPost('email');
@@ -23,76 +26,63 @@ class AuthController extends BaseController
 
         // Save the reset token to the database
         $userModel->update($user['id'], ['reset_token' => $resetToken]);
-        // var_dump($user);
-        // die();
+
+        // Generate reset link
+        $resetLink = base_url("/auth/reset-password/$resetToken");
 
         // Send email with the reset link
-        $resetLink = base_url("/auth/reset-password/$resetToken");
-        $message = "Click the link below to reset your password:\n\n$resetLink";
-
-        // $emailService = \Config\Services::email();
-        // $emailService->setTo($email);
-        // $emailService->setSubject('Password Reset Request');
-        // $emailService->setMessage($message);
-        // $emailService->send();
-
-        // Send reset link via email               
-        $emailService = \Config\Services::email();               
+        $emailService = \Config\Services::email();
+        $emailService->setFrom('zakariaaitballouk2018@gmail.com', 'CodeIgniter Reset');
         $emailService->setTo($email);
-        // var_dump($email);
-        // die();
-        $emailService->setFrom('zakariaaitballouk2018@gmail.com', 'CodeIgniter reset');$emailService->setSubject('Password Reset Request');
-        $emailService->setMessage("Click the link to reset your password: $resetLink");
+        $emailService->setSubject('Password Reset Request');
+        $emailService->setMessage("Click the link to reset your password: <a href='$resetLink'>$resetLink</a>");
 
-        if ($emailService->send()) {                   
-            return  redirect()->back()->with('error', 'Password reset link has been sent to your email');
-        } else {                   
-            return  redirect()->back()->with('error', 'There was an issue sending the email.');
-        }    
-
-        // return redirect()->back()->with('success', 'Reset link sent to your email.');
+        if ($emailService->send()) {
+            return redirect()->back()->with('success', 'Password reset link has been sent to your email.');
+        } else {
+            return redirect()->back()->with('error', 'There was an issue sending the email.');
+        }
     }
 
     public function resetPassword($token = null)
-{
-    $userModel = new UserModel();
+    {
+        $userModel = new UserModel();
 
-    // Validate the token
-    $user = $userModel->where('reset_token', $token)->first();
+        // Validate the token
+        $user = $userModel->where('reset_token', $token)->first();
 
-    if (!$user) {
-        return redirect()->to('/auth/forgot-password')->with('error', 'Invalid or expired reset token.');
+        if (!$user) {
+            return redirect()->to('/auth/forgot-password')->with('error', 'Invalid or expired reset token.');
+        }
+
+        return view('reset_password', ['token' => $token]);
     }
 
-    return view('auth/reset_password', ['token' => $token]);
-}
+    public function updatePassword()
+    {
+        $token = $this->request->getPost('token');
+        $newPassword = $this->request->getPost('new_password');
+        $confirmPassword = $this->request->getPost('confirm_password');
 
-public function updatePassword()
-{
-    $token = $this->request->getPost('token');
-    $newPassword = $this->request->getPost('new_password');
-    $confirmPassword = $this->request->getPost('confirm_password');
+        if ($newPassword !== $confirmPassword) {
+            return redirect()->back()->with('error', 'Passwords do not match.');
+        }
 
-    if ($newPassword !== $confirmPassword) {
-        return redirect()->back()->with('error', 'Passwords do not match.');
+        $userModel = new UserModel();
+
+        // Find the user by the reset token
+        $user = $userModel->where('reset_token', $token)->first();
+
+        if (!$user) {
+            return redirect()->to('/auth/forgot-password')->with('error', 'Invalid or expired reset token.');
+        }
+
+        // Update the password and clear the reset token
+        $userModel->update($user['id'], [
+            'password' => $newPassword, // Change this to hash password for production
+            'reset_token' => null,
+        ]);
+
+        return redirect()->to('/Login')->with('success', 'Password changed successfully.');
     }
-
-    $userModel = new UserModel();
-
-    // Find the user by the reset token
-    $user = $userModel->where('reset_token', $token)->first();
-
-    if (!$user) {
-        return redirect()->to('/auth/forgot-password')->with('error', 'Invalid or expired reset token.');
-    }
-
-    // Update the password and clear the reset token
-    $userModel->update($user['id'], [
-        'password' => $newPassword, // Not hashed per your requirement
-        'reset_token' => null,
-    ]);
-
-    return redirect()->to('/auth/login')->with('success', 'Password changed successfully.');
-}
-
 }
