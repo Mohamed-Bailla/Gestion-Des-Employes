@@ -108,25 +108,8 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-white bg-success">
-                            <div class="card-body">
-                                <h5 class="card-title">Active Employees</h5>
-                                <p class="card-text">100</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 mb-3">
-                        <div class="card text-white bg-danger">
-                            <div class="card-body">
-                                <h5 class="card-title">Absent Today</h5>
-                                <p class="card-text">5</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
 
-                <!-- Employees Table -->
+                <!-- Employees Table
                 <div class="row">
                     <div class="col-md-12">
                         <h4>Employee List</h4>
@@ -165,6 +148,7 @@
                         </table>
                     </div>
                 </div>
+                 -->
             </div>
         </div>
     </div>

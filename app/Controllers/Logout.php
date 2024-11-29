@@ -2,10 +2,13 @@
 
 namespace App\Controllers;
 
-class Dashboard extends BaseController
+class Logout extends BaseController
 {
     public function index(): string
     {
-        return view('dashboardcopy');
+        return view('login/index');
+        
     }
+
+
 }

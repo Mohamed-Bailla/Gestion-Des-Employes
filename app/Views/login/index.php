@@ -22,10 +22,19 @@
                     <label for="exampleInputPassword1" class="form-label">Password</label>
                     <input type="password" name="password" class="form-control" id="exampleInputPassword1">
              </div>
+             <p class="text-end">
+                      <a href="/forgotpassword">Mot de pass oublier</a>
+             </p>
 
              <?php if (session()->getFlashdata('error')): ?>
              <p class="alert alert-danger"><?= session()->getFlashdata('error') ?></p>
              <?php endif; ?>
+
+             <?php if (session()->getFlashdata('success')): ?>
+             <div class="alert alert-success">
+              <?= session()->getFlashdata('success') ?>
+              </div>
+              <?php endif; ?>
 
              <div class="d-grid gap-2 col-6 mx-auto">
                     <button class="btn btn-primary" type="submit">Login</button>
