@@ -23,6 +23,9 @@ $routes->get('/forgotpassword', 'AuthController::index');
 $routes->get('/logout', 'Login::index');
 
 
+$routes->get('/dash', 'Dashboard::index');
+
+
 // $routes->get('/auth/reset-password/(:any)', 'AuthController::resetPassword/$1');
 $routes->get('/auth/forgot-password', 'AuthController::index'); // Show forgot password form
 $routes->post('/auth/processforgotpassword', 'AuthController::processForgotPassword'); // Handle email submission
@@ -43,3 +46,15 @@ $routes->get('/employee/delete/(:num)', 'EmployeeController::delete/$1');
 $routes->get('/dashboard', 'EmployeeController::employee');
 
 
+$routes->get('/department', 'DepartmentController::index');
+$routes->get('/department/create', 'DepartmentController::create');
+$routes->post('/department/store', 'DepartmentController::store');
+$routes->get('/department/edit/(:num)', 'DepartmentController::edit/$1');
+$routes->post('/department/update/(:num)', 'DepartmentController::update/$1');
+$routes->get('/department/delete/(:num)', 'DepartmentController::delete/$1');
+
+
+$routes->get('employees/pdf', 'EmployeeController::downloadPDF');
+ 
+$routes->get('/profile', 'ProfileController::index');
+$routes->post('/profile/update_profile', 'ProfileController::update_profile');

@@ -76,14 +76,14 @@
     <div class="reset-password-card">
         <h1>Reset Password</h1>
 
-        <!-- Flash Messages -->
+       
         <?php if (session()->getFlashdata('error')): ?>
             <div class="alert alert-danger" role="alert"><?= session()->getFlashdata('error') ?></div>
         <?php elseif (session()->getFlashdata('success')): ?>
             <div class="alert alert-success" role="alert"><?= session()->getFlashdata('success') ?></div>
         <?php endif; ?>
 
-        <!-- Reset Password Form -->
+      
         <form method="post" action="<?= base_url('/auth/update-password') ?>">
             <?= csrf_field() ?>
             <input type="hidden" name="token" value="<?= $token ?>">

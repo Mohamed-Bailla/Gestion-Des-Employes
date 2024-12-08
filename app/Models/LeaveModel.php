@@ -11,8 +11,8 @@ class LeaveModel extends Model
 
     public function getEmployeeLeaves($employee_id)
     {
-        return $this->where('employee_id', $employee_id)->findAll();  // Fetch leaves for a particular employee
+        return $this->where('employee_id', $employee_id)->findAll(); 
     }
 
-    // Additional methods to approve or reject leaves can be added
+   
 }

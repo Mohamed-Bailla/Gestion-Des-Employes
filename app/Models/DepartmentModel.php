@@ -8,9 +8,11 @@ class DepartmentModel extends Model
     protected $table = 'departments';
     protected $primaryKey = 'id';
     protected $allowedFields = ['department_name'];
+  
+    
 
     public function getDepartments()
     {
-        return $this->findAll();  // Fetch all departments
+        return $this->findAll();  
     }
 }

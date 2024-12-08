@@ -11,9 +11,9 @@ class EmployeeModel extends Model
 
     protected $useTimestamps = false;
     protected $validationRules = [
-        'name' => 'required|max_length[255]',
-        'position' => 'required|max_length[255]',
-        'department' => 'required|max_length[255]',
+        'name' => 'required|alpha_numeric|max_length[255]',
+        'position' => 'required|alpha_numeric|max_length[255]',
+        'department_id' => 'required|numeric',
     ];
 
  
@@ -24,7 +24,7 @@ class EmployeeModel extends Model
         {
         
             return $this->select('employees.id, employees.name, employees.position, employees.department_id, employees.created_at, employees.updated_at, departments.department_name')
-                        ->join('departments', 'departments.id = employees.department_id', 'left') // Left join to include employees even if they don't have a department
+                        ->join('departments', 'departments.id = employees.department_id', 'left') 
                         ->findAll();
         }
     }

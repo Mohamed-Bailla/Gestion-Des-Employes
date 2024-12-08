@@ -14,23 +14,23 @@ class AuthController extends BaseController
         $email = $this->request->getPost('email');
         $userModel = new UserModel();
 
-        // Check if the email exists in the database
+       
         $user = $userModel->where('email', $email)->first();
 
         if (!$user) {
             return redirect()->back()->with('error', 'Email not found.');
         }
 
-        // Generate a secure reset token
+        
         $resetToken = bin2hex(random_bytes(16));
 
-        // Save the reset token to the database
+   
         $userModel->update($user['id'], ['reset_token' => $resetToken]);
 
-        // Generate reset link
+     
         $resetLink = base_url("/auth/reset-password/$resetToken");
 
-        // Send email with the reset link
+   
         $emailService = \Config\Services::email();
         $emailService->setFrom('zakariaaitballouk2018@gmail.com', 'GESTION');
         $emailService->setTo($email);
@@ -48,7 +48,7 @@ class AuthController extends BaseController
     {
         $userModel = new UserModel();
 
-        // Validate the token
+      
         $user = $userModel->where('reset_token', $token)->first();
 
         if (!$user) {
@@ -70,16 +70,16 @@ class AuthController extends BaseController
 
         $userModel = new UserModel();
 
-        // Find the user by the reset token
+  
         $user = $userModel->where('reset_token', $token)->first();
 
         if (!$user) {
             return redirect()->to('/auth/forgot-password')->with('error', 'Invalid or expired reset token.');
         }
 
-        // Update the password and clear the reset token
+        
         $userModel->update($user['id'], [
-            'password' => $newPassword, // Change this to hash password for production
+            'password' => $newPassword, 
             'reset_token' => null,
         ]);
 

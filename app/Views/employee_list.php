@@ -3,7 +3,8 @@
 <head>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Employee Dashboard</title>
@@ -58,18 +59,20 @@
             margin-bottom: 20px;
         }
 
-        /* Sidebar */
+        
         #sidebar-wrapper {
             min-height: 100vh;
-            background-color: #343a40;
+            background-color: #00A8E8;
             color: #fff;
             width: 280px;
             transition: all 0.3s ease;
+           background-color: #0d6efd;
+           border-top-right-radius: 30px;
            
             box-shadow: 2px 0px 10px rgba(0, 0, 0, 0.1);
         }
 
-        /* Sidebar links */
+        
         #sidebar-wrapper .nav-item .nav-link {
             color: #dcdfe1;
             font-weight: 500;
@@ -79,15 +82,15 @@
             transition: background-color 0.3s ease;
         }
 
-        /* Active state for sidebar links */
+      
         #sidebar-wrapper .nav-item .nav-link.active, 
         #sidebar-wrapper .nav-item .nav-link:hover {
-            background-color: #495057;
+            background-color: #0085ff;
             color: #fff;
             border-radius: 5px;
         }
 
-        /* Sidebar header */
+        
         .sidebar-heading {
             font-size: 1.5rem;
             font-weight: bold;
@@ -98,14 +101,15 @@
             margin-bottom: 20px;
         }
 
-        /* Content Wrapper */
+        
         #page-content-wrapper {
             flex-grow: 1;
             padding: 30px;
+            
             background-color: #f8f9fa;
         }
 
-        /* Navbar */
+
         .navbar {
             background-color: #ffffff;
             box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
@@ -126,7 +130,7 @@
             font-size: 1.1rem;
         }
 
-        /* Cards */
+      
         .card {
             border-radius: 10px;
             box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -166,12 +170,12 @@
             color: white;
         }
 
-        /* Responsive Sidebar */
+        
         #wrapper.toggled #sidebar-wrapper {
-            margin-left: -270px;
+            margin-left: -280px;
         }
 
-        /* Toggle button */
+        
         #menu-toggle {
             background-color: #343a40;
             color: white;
@@ -180,128 +184,192 @@
             padding: 10px 15px;
             font-size: 1rem;
         }
-
-        #menu-toggle:hover {
-            background-color: #495057;
+        #wrapper.toggled #sidebar-wrapper {
+            margin-left: -230px;
         }
+
+        
+        #menu-toggle {
+            background-color: transparent;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 15px;
+            font-size: 1rem;
+            position: absolute;
+            left: 10px;
+        }
+
+      
+
+        .btn-add-employee {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn-add-employee:hover {
+            background-color: #0056b3;
+        }
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+
     </style>
 </head>
 <body>
 
-<!-- Wrapper for the Sidebar and Content -->
+
 <div class="d-flex" id="wrapper">
 
-<!-- Sidebar -->
 <div class="d-flex flex-column flex-shrink-0 p-3" id="sidebar-wrapper">
-    <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-        <i class="bi pe-none me-2" width="40" height="32"></i>
-        <span class="fs-4 sidebar-heading">Dashboard</span>
-    </a>
-    <hr>
+            <a href="#" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
+                <i class="bi bi-house-door fs-3 me-2 logo-icon"></i>
+                <span class="fs-4 fw-bold text-light logo-text text-center">Gestion Des Employes</span>
+            </a>
+            <hr class="logo-divider">
+
+            <style>
+           
+                body {
+                    font-family: 'DM Sans', sans-serif;
+                }
+
+                .logo-icon, .logo-text {
+                    transition: all 0.3s ease;
+                }
+
+             
+                .logo-icon:hover, .logo-text:hover {
+                    color: #007bff; 
+                    transform: scale(1.1); 
+                }
+
+                .logo-text {
+                    font-family: 'DM Sans', sans-serif;
+                    font-weight: 700; 
+                    letter-spacing: 0.5px;
+                }
+
+               
+                .logo-divider {
+                    border: 0;
+                    border-top: 2px solid #fff;
+                    margin-top: 10px; 
+                }
+            </style>
+
+
+    
     <ul class="nav flex-column mb-auto">
         <li class="nav-item">
-            <a href="#" class="nav-link active">
+            <a href="<?= site_url('dashboard') ?>" class="nav-link ">
                 <i class="fas fa-home sidebar-icon"></i>
                 Home
             </a>
         </li>
-        <li>
-            <a href="<?= base_url('employee') ?>" class="nav-link">
-                <i class="fas fa-tachometer-alt sidebar-icon"></i>
-                Dashboard
+        <li class="nav-item">
+            <a href="<?= base_url('employee') ?>" class="nav-link text-white">
+                <i class="fas fa-users sidebar-icon text-white"></i>
+                Employees
             </a>
         </li>
-        <li>
-            <a href="#" class="nav-link">
-                <i class="fas fa-building sidebar-icon"></i>
+        <li class="nav-item">
+            <a href="<?= base_url('department') ?>" class="nav-link text-white">
+                <i class="fas fa-building sidebar-icon text-white"></i>
                 Departments
             </a>
         </li>
-        <li>
-            <a href="#" class="nav-link">
-                <i class="fas fa-box sidebar-icon"></i>
-                Products
-            </a>
-        </li>
-        <li>
-            <a href="#" class="nav-link">
-                <i class="fas fa-users sidebar-icon"></i>
-                Customers
-            </a>
-        </li>
+
+       
     </ul>
     <hr>
     <div class="dropdown">
-        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="" alt="" width="32" height="32" class="rounded-circle me-2">
-            <strong>mdo</strong>
+        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle text-white" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="\public\pic.png" alt="" width="32" height="32" class="rounded-circle me-2">
+            <strong>Admin</strong>
         </a>
         <ul class="dropdown-menu text-small shadow">
-         
-            <li><a class="dropdown-item" href="#">Settings</a></li>
-            <li><a class="dropdown-item" href="#">Profile</a></li>
-            <li><hr class="dropdown-divider"></li>
+            
+       
             <li><a class="dropdown-item" href="/">Sign out</a></li>
         </ul>
     </div>
 </div>
 
-<!-- Page Content Wrapper -->
+
 <div id="page-content-wrapper">
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="btn" id="menu-toggle">
-                <i class="fas fa-arrow-left"></i>
-            </button>
-           
-        </div>
-    </nav>
+   
+<div class="container-fluid">
+                <button class="btn mb-4" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
 
+            <script>
+        document.getElementById('menu-toggle').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.getElementById('wrapper').classList.toggle('toggled');
+        });
+    </script>
 
+    <div class="card">
+    <div class="card-header">
+        <h3>Employee List</h3>
+    </div>
+    <div class="card-body">
+        <a href="<?= base_url('employee/create'); ?>" class="btn btn-primary mb-3">
+            <i class="fas fa-plus"></i> Add Employee
+        </a>
+        <a href="<?= base_url('employees/pdf'); ?>" class="btn btn-danger mb-3">
+            <i class="fas fa-file-pdf"></i> Download PDF
+        </a>
 
-        <h4 class="my-2">Employee List</h4>
-        <div class="table-responsive">
-            <table class="table table-bordered table-striped">
-                <thead>
-                    <tr>
-                        <th>Name</th>
-                        <th>Position</th>
-                        <th>Department</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                <?php foreach ($employees as $emp): ?>
+        <table class="table table-hover">
+            <thead>
                 <tr>
-                    <td><?= esc($emp['name']); ?></td>
-                    <td><?= esc($emp['position']); ?></td>
-                    <td><?= esc($emp['department_name']); ?></td> <!-- Display department name from the join -->
+                    <th>Employee ID</th>
+                    <th>Name</th>
+                    <th>Department</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <?php foreach ($employees as $employee): ?>
+                <tr>
+                    <td><?= esc($employee['name']); ?></td>
+                    <td><?= esc($employee['position']); ?></td>
+                    <td><?= esc($employee['department_name']); ?></td>
                     <td><span class="badge bg-success"><?= esc($emp['status'] ?? 'Active'); ?></span></td>
-                    <td class="action-buttons">
-                        <a href="<?= base_url('/employee/edit/' . $emp['id']); ?>" class="btn btn-info btn-sm">
-                            <i class="fas fa-pencil-alt"></i> Edit
+                    <td class="actions">
+                        <a href="<?= base_url('employee/edit/' . $employee['id']); ?>" class="btn btn-info btn-sm btn-tooltip" data-tooltip="Edit">
+                            <i class="fas fa-pencil-alt"></i>
                         </a>
-                        <a href="<?= base_url('/employee/delete/' . $emp['id']); ?>" class="btn btn-danger btn-sm">
-                            <i class="fas fa-trash-alt"></i> Delete
+                        <a href="<?= base_url('employee/delete/' . $employee['id']); ?>" class="btn btn-danger btn-sm btn-tooltip" data-tooltip="Delete" onclick="return confirm('Are you sure you want to delete this employee?')">
+                            <i class="fas fa-trash-alt"></i>
                         </a>
                     </td>
                 </tr>
                 <?php endforeach; ?>
             </tbody>
-            </table>
-        </div>
+        </table>
     </div>
+</div>
+
+
 </div>
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-<script>
-    // Toggle Sidebar
-    document.getElementById('menu-toggle').addEventListener('click', function() {
-        document.getElementById('wrapper').classList.toggle('toggled');
-    });
-</script>
+
+<script src="../assets/dist/js/bootstrap.bundle.min.js"></script>
+<script src="sidebars.js"></script></body>
 
 </body>
 </html>
